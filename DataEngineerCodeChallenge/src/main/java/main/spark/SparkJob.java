@@ -32,7 +32,7 @@ public class SparkJob {
     	 */
     	Dataset<AccessLog> accessLogData = spark.read().text(
 				"data\\2015_07_22_mktplace_shop_web_log_sample.log.gz")
-				.mapPartitions(new AccessLogEntryParser(),
+				.mapPartitions(new AccessLogParser(),
 						Encoders.bean(AccessLog.class));
     	accessLogData.createOrReplaceTempView("accessLogData");
 //		accessLogData.show(false);

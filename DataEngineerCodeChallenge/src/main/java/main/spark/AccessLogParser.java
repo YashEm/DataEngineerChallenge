@@ -17,12 +17,12 @@ import org.slf4j.LoggerFactory;
  * @author yash.chawada
  *
  */
-public class AccessLogEntryParser implements MapPartitionsFunction<Row, AccessLog> {
+public class AccessLogParser implements MapPartitionsFunction<Row, AccessLog> {
 
 	private static final long serialVersionUID = 1L;
-	private Logger logger = LoggerFactory.getLogger(AccessLogEntryParser.class);
+	private Logger logger = LoggerFactory.getLogger(AccessLogParser.class);
 	
-	public AccessLogEntryParser() {
+	public AccessLogParser() {
 	}
 
 	@Override
